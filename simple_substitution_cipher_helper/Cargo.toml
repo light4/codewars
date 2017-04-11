@@ -1,0 +1,6 @@
+[package]
+name = "simple_substitution_cipher_helper"
+version = "0.1.0"
+authors = ["lightning1141 <lightning1141@gmail.com>"]
+
+[dependencies]
