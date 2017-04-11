@@ -1,0 +1,6 @@
+[package]
+name = "is_my_friend_cheating"
+version = "0.1.0"
+authors = ["lightning1141 <lightning1141@gmail.com>"]
+
+[dependencies]
