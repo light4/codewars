@@ -9,6 +9,7 @@
 0. [Color Choice](https://www.codewars.com/kata/55be10de92aad5ef28000023)
 0. [Is my friend cheating?](https://www.codewars.com/kata/5547cc7dcad755e480000004)
 0. [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)
+0. [Twice linear](https://www.codewars.com/kata/5672682212c8ecf83e000050)
 
 ### Solutions
 0. [Product of consecutive Fib numbers](product_of_consecutive_fib_numbers)
@@ -19,3 +20,4 @@
 0. [Color Choice](color_choice)
 0. [Is my friend cheating?](is_my_friend_cheating)
 0. [Valid Braces](valid_braces)
+0. [Twice linear](twice_linear)
