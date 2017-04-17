@@ -9,39 +9,30 @@ fn part(n: i64) -> String {
     result
 }
 
-fn parts_of_len_by_index(n: i64, l: i64, i: i64) -> Vec<Vec<i64>> {
-    let mut result: Vec<Vec<i64>> = vec![];
-    for mut test in parts_of_len((n - i), (l - 1)) {
-        test.push(i);
-        result.push(test);
+fn parts_of_len_by_index(n: i64, l: i64, i: i64) -> Vec<i64> {
+    let mut result: Vec<i64> = vec![];
+    for test in parts_of_len((n - i), (l - 1)) {
+        result.push(test * i);
     }
     return result
 }
 
-fn parts_of_len(n: i64, l: i64) -> Vec<Vec<i64>> {
+fn parts_of_len(n: i64, l: i64) -> Vec<i64> {
     if l == 1 {
-        return vec![vec![n]]
+        return vec![n]
     } else {
         let result = (1..(n/l + 1)).map(|i| parts_of_len_by_index(n, l, i))
-                                   .fold(vec![], |acc, x| {let mut r: Vec<Vec<i64>> = x; r.extend(acc); return r});
+                                   .fold(vec![], |acc, x| {let mut r: Vec<i64> = x; r.extend(acc); return r});
         return result
     }
 }
 
-fn partitions(n: i64) -> Vec<Vec<i64>> {
-    let mut result: Vec<Vec<i64>> = vec![];
-    for i in 1..(n + 1) {
-        result.extend(parts_of_len(n, i))
-    }
-    return result
-}
-
 fn products(n: i64) -> BTreeSet<i64> {
     let mut result = BTreeSet::new();
-    let partitions = partitions(n);
-    for item in partitions {
-        let product: i64 = item.iter().product();
-        result.insert(product);
+    for l in 1..(n + 1) {
+        for item in parts_of_len(n, l) {
+            result.insert(item);
+        }
     }
     result
 }
