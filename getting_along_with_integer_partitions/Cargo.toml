@@ -1,0 +1,6 @@
+[package]
+name = "getting_along_with_integer_partitions"
+version = "0.1.0"
+authors = ["lightning1141 <lightning1141@gmail.com>"]
+
+[dependencies]
