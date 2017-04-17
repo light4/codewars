@@ -1,5 +1,3 @@
-use std::collections::BTreeSet;
-
 fn part(n: i64) -> String {
     let products = products(n);
     let range = range(&products);
@@ -27,33 +25,34 @@ fn parts_of_len(n: i64, l: i64) -> Vec<i64> {
     }
 }
 
-fn products(n: i64) -> BTreeSet<i64> {
-    let mut result = BTreeSet::new();
+fn products(n: i64) -> Vec<i64> {
+    let mut result = vec![];
     for l in 1..(n + 1) {
         for item in parts_of_len(n, l) {
-            result.insert(item);
+            result.push(item);
         }
     }
+    result.sort();
+    result.dedup();
     result
 }
 
-fn range(ref r: &BTreeSet<i64>) -> i64 {
-    r.iter().max().unwrap() - r.iter().min().unwrap()
+fn range(ref r: &Vec<i64>) -> i64 {
+    r[r.len() - 1] - r[0]
 }
 
-fn average(ref r: &BTreeSet<i64>) -> f64 {
+fn average(ref r: &Vec<i64>) -> f64 {
     let len = r.len();
     let sum: i64 = r.into_iter().sum();
     sum as f64 / len as f64
 }
 
-fn median(ref r: &BTreeSet<i64>) -> f64 {
+fn median(ref r: &Vec<i64>) -> f64 {
     let n = r.len();
-    let a: Vec<_> = r.into_iter().collect();
     if n % 2 == 0 {
-        return (a[n / 2] + a[n / 2 - 1]) as f64 / 2.0
+        return (r[n / 2] + r[n / 2 - 1]) as f64 / 2.0
     } else {
-        return *a[(n - 1) / 2] as f64
+        return r[(n - 1) / 2] as f64
     }
 }
 
