@@ -1,3 +1,5 @@
+use std::collections::BTreeSet;
+
 fn part(n: i64) -> String {
     let products = products(n);
     let range = range(&products);
@@ -9,10 +11,9 @@ fn part(n: i64) -> String {
 
 fn parts_of_len_by_index(n: i64, l: i64, i: i64) -> Vec<Vec<i64>> {
     let mut result: Vec<Vec<i64>> = vec![];
-    for test in parts_of_len((n - i), (l - 1)){
-        let mut item = vec![i];
-        item.extend(test);
-        result.push(item);
+    for mut test in parts_of_len((n - i), (l - 1)) {
+        test.push(i);
+        result.push(test);
     }
     return result
 }
@@ -35,35 +36,33 @@ fn partitions(n: i64) -> Vec<Vec<i64>> {
     return result
 }
 
-fn products(n: i64) -> Vec<i64> {
-    let mut result = vec![];
+fn products(n: i64) -> BTreeSet<i64> {
+    let mut result = BTreeSet::new();
     let partitions = partitions(n);
     for item in partitions {
         let product: i64 = item.iter().product();
-        if !result.contains(&product) {
-            result.push(product);
-        }
+        result.insert(product);
     }
-    use std::collections::BinaryHeap;
-    BinaryHeap::from(result).into_sorted_vec()
+    result
 }
 
-fn range(ref r: &Vec<i64>) -> i64 {
-    return r[r.len() - 1] - r[0]
+fn range(ref r: &BTreeSet<i64>) -> i64 {
+    r.iter().max().unwrap() - r.iter().min().unwrap()
 }
 
-fn average(ref r: &Vec<i64>) -> f64 {
+fn average(ref r: &BTreeSet<i64>) -> f64 {
     let len = r.len();
     let sum: i64 = r.into_iter().sum();
     sum as f64 / len as f64
 }
 
-fn median(ref r: &Vec<i64>) -> f64 {
+fn median(ref r: &BTreeSet<i64>) -> f64 {
     let n = r.len();
+    let a: Vec<_> = r.into_iter().collect();
     if n % 2 == 0 {
-        return (r[n / 2] + r[n / 2 - 1]) as f64 / 2.0
+        return (a[n / 2] + a[n / 2 - 1]) as f64 / 2.0
     } else {
-        return r[(n - 1) / 2] as f64
+        return *a[(n - 1) / 2] as f64
     }
 }
 
