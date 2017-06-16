@@ -11,6 +11,7 @@
 0. [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)
 0. [Twice linear](https://www.codewars.com/kata/5672682212c8ecf83e000050)
 0. [Getting along with Integer Partitions](https://www.codewars.com/kata/55cf3b567fc0e02b0b00000b)
+0. [A disguised sequence](https://www.codewars.com/kata/563f0c54a22b9345bf000053)
 
 ### Solutions
 0. [Product of consecutive Fib numbers](product_of_consecutive_fib_numbers)
@@ -23,3 +24,4 @@
 0. [Valid Braces](valid_braces)
 0. [Twice linear](twice_linear)
 0. [Getting along with Integer Partitions](getting_along_with_integer_partitions)
+0. [A disguised sequence](a_disguised_sequence)
