@@ -9,6 +9,10 @@ struct Map {
     count: usize,
 }
 
+fn repeat_char(&c: &char, n: usize) -> String {
+    (0..n).map(|_| c).collect()
+}
+
 fn mix(s1: &str, s2: &str) -> String {
     let mut result: Vec<Map> = vec![];
     let mut map1 = HashMap::new();
@@ -53,12 +57,10 @@ fn mix(s1: &str, s2: &str) -> String {
             }
         }
     }
-    result.sort_by(|a, b| b.count.cmp(&a.count).reverse()
-                           .then(b.order.cmp(&a.order)).reverse()
-                           .then(a.c.cmp(&b.c)));
+    result.sort_by_key(|m| (-(m.count as i32), m.order, m.c));
     let mut new_result = vec![];
     for map in result {
-        new_result.push(format!("{}:{}", map.prefix, map.c.to_string().repeat(map.count)));
+        new_result.push(format!("{}:{}", map.prefix, repeat_char(&map.c, map.count)));
     }
     new_result.join("/")
 }
