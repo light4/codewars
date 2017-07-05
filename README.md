@@ -13,6 +13,7 @@
 0. [Getting along with Integer Partitions](https://www.codewars.com/kata/55cf3b567fc0e02b0b00000b)
 0. [A disguised sequence](https://www.codewars.com/kata/563f0c54a22b9345bf000053)
 0. [Strings Mix](https://www.codewars.com/kata/5629db57620258aa9d000014)
+0. [My smallest code interpreter (aka Brainf**k)](https://www.codewars.com/kata/526156943dfe7ce06200063e)
 
 ### Solutions
 0. [Product of consecutive Fib numbers](product_of_consecutive_fib_numbers)
@@ -27,3 +28,4 @@
 0. [Getting along with Integer Partitions](getting_along_with_integer_partitions)
 0. [A disguised sequence](a_disguised_sequence)
 0. [Strings Mix](strings_mix)
+0. [My smallest code interpreter (aka Brainf**k)](brain_fuck)
