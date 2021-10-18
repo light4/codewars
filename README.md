@@ -15,6 +15,7 @@
 0. [Strings Mix](https://www.codewars.com/kata/5629db57620258aa9d000014)
 0. [My smallest code interpreter (aka Brainf**k)](https://www.codewars.com/kata/526156943dfe7ce06200063e)
 0. [Validate Sudoku with size `NxN`](https://www.codewars.com/kata/540afbe2dc9f615d5e000425)
+0. [Path Finder #1: can you reach the exit?](https://www.codewars.com/kata/5765870e190b1472ec0022a2/)
 
 ### Solutions
 0. [Product of consecutive Fib numbers](product_of_consecutive_fib_numbers)
@@ -31,3 +32,4 @@
 0. [Strings Mix](strings_mix)
 0. [My smallest code interpreter (aka Brainf**k)](brain_fuck)
 0. [Validate Sudoku with size `NxN`](validate_sudoku)
+0. [Path Finder #1: can you reach the exit?](path_finder)
