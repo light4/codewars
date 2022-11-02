@@ -15,8 +15,9 @@
 0. [Strings Mix](https://www.codewars.com/kata/5629db57620258aa9d000014)
 0. [My smallest code interpreter (aka Brainf**k)](https://www.codewars.com/kata/526156943dfe7ce06200063e)
 0. [Validate Sudoku with size `NxN`](https://www.codewars.com/kata/540afbe2dc9f615d5e000425)
-0. [Path Finder #1: can you reach the exit?](https://www.codewars.com/kata/5765870e190b1472ec0022a2/)
-0. [Sudoku Solver](https://www.codewars.com/kata/5296bc77afba8baa690002d7/)
+0. [Path Finder #1: can you reach the exit?](https://www.codewars.com/kata/5765870e190b1472ec0022a2)
+0. [Sudoku Solver](https://www.codewars.com/kata/5296bc77afba8baa690002d7)
+0. [Decimal to any Rational or Irrational Base Converter](https://www.codewars.com/kata/5509609d1dbf20a324000714)
 
 ### Solutions
 0. [Product of consecutive Fib numbers](product_of_consecutive_fib_numbers)
@@ -35,3 +36,4 @@
 0. [Validate Sudoku with size `NxN`](validate_sudoku)
 0. [Path Finder #1: can you reach the exit?](path_finder)
 0. [Sudoku Solver](sudoku_solver)
+0. [Decimal to any Rational or Irrational Base Converter](decimal_to_any_rational_or_irrational_base_converter)
